@@ -1,0 +1,341 @@
+
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow-y: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+}
+#header {
+    text-align: center;
+    background-color:#2B2B2B;/*#9933cc;*/
+    opacity: .7;
+    color: #ffffff;
+    padding: 15px;
+    position: relative;
+    height: 100px;
+}
+#body {
+    color:white;
+     min-height: 100%;
+     height:100%;
+     padding-bottom:60px;
+     margin: 0 auto;
+     overflow: hidden;
+}
+
+.click:hover{
+	cursor:pointer;
+}
+
+ul li{
+	cursor:pointer;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+label {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#submit{
+    margin:0;
+    position: relative;
+    top: 10px;
+    left: 42%;
+    right: 50%;
+    border-radius:12px; 
+    font-weight: bold;
+}
+
+#body {
+    padding:10px;
+    padding-bottom:50px;
+}
+
+#footer {
+    position: absolute;
+    opacity: .8;
+    width: 100%;
+    height: 100px;
+    background-color:#2B2B2B;/* #0099cc;*/
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    bottom: 0;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 400px) {
+    /* For tablets: */
+    .col-sm-1 {width: 8.33%;}
+    .col-sm-2 {width: 16.66%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-4 {width: 33.33%;}
+    .col-sm-5 {width: 41.66%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-7 {width: 58.33%;}
+    .col-sm-8 {width: 66.66%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
+}
+
+
+
+.spinner{
+    margin-top:20px;
+    margin-left:15px;
+    width:50%;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* ------- Login Form Style *-------------*/
+.Form {
+    background-color:#333333;
+    opacity: .9;
+    padding:20px;
+    border-radius:25px;
+    border: 3px solid #f1f1f1;
+  }
+
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    padding: 12px 20px;
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    color:white;
+    font-weight: bold;
+  }
+  .parsed_files input[type=text]{
+  width:70%;
+  }
+
+
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+
+  /* Avatar image */
+ .avatar {
+    width: 20%;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .container-fluid {
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+
+  /* Process Page */
+.sidenav {
+    width: 250px;
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 0;
+    background-color: #111;
+    opacity: .8;
+    padding-top: 20px;
+}
+
+.navigator-menu {
+    padding-left:15px;
+    position:fixed;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.parsed_files{
+    left: 280px;
+    position: relative;
+    color:white;
+    background-color: #333333;
+    opacity: .9;
+    padding:10px;
+    border-radius:25px;
+}
+
+
+ .column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.segmentName{
+    text-align:center;
+    color:yellow;
+    font-style:italic;
+
+}
+.config-header{
+  padding-left: 20px;
+  color: yellow;
+}
+
+.border {
+  border-style: ridge;
+  border-radius:25px;
+  border-color: lightsteelblue
+}
+
+.submit-button {
+    margin-right:15px;
+    font-weight: bold;
+    margin:0;
+    left:60%;
+    position:relative;
+}

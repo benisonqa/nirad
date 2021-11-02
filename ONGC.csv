@@ -1,0 +1,23 @@
+FILE,SECTION,FIELDS
+,,
+/etc/config/network,config globals 'globals' ,option congestion 
+,,option mptcp_fullmesh_num_subflows
+,,option mptcp_ndiffports_num_subflows
+,,
+,config interface 'cl_wan1',option multipath
+,,
+,config interface 'cl_wan2',option multipath
+,,
+,config interface 'cl_wan3',option multipath
+,,
+,config interface 'cl_wan4',option multipath
+,,
+,,
+/etc/config/openvpn,config openvpn 'client',option cert
+,,option key
+,,option remote
+,,option proto
+,,option port
+,,option tls_auth
+,,option ca
+,,option nice

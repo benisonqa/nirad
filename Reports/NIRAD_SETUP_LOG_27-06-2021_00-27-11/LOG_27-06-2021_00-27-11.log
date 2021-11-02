@@ -1,0 +1,31 @@
+2021-06-27 00:27:31,925  INFO     | [logger.py:93] > 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                       >>>>>>> STARTING NIRAD SETUP <<<<<<<
+
+>> Remote IP Address..........: 192.168.10.120
+>> NIRAD APP Version..........: 4
+>> LOG FILE Location............: C:\Users\Prashant Roy\Desktop\Nirad-Files\Nirad-Auto-Web\Reports\NIRAD_SETUP_LOG_27-06-2021_00-27-11\LOG_27-06-2021_00-27-11.log
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2021-06-27 00:27:31,925  INFO     | [nirad.py:37] > Checking Device Reachability
+2021-06-27 00:27:31,928  INFO     | [nirad.py:40] > Device is reachable
+2021-06-27 00:27:31,929  INFO     | [nirad.py:44] > Trying to connect to Device using default username and password
+2021-06-27 00:28:15,846  INFO     | [logger.py:93] > 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                                       >>>>>>> STARTING NIRAD SETUP <<<<<<<
+
+>> Remote IP Address..........: 192.168.10.120
+>> NIRAD APP Version..........: 4
+>> LOG FILE Location............: C:\Users\Prashant Roy\Desktop\Nirad-Files\Nirad-Auto-Web\Reports\NIRAD_SETUP_LOG_27-06-2021_00-27-11\LOG_27-06-2021_00-27-11.log
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2021-06-27 00:28:15,846  INFO     | [nirad.py:37] > Checking Device Reachability
+2021-06-27 00:28:15,849  INFO     | [nirad.py:40] > Device is reachable
+2021-06-27 00:28:15,849  INFO     | [nirad.py:44] > Trying to connect to Device using default username and password
+2021-06-27 00:28:15,972  INFO     | [nirad.py:110] > Initiating network file download
+2021-06-27 00:28:16,277  INFO     | [nirad.py:110] > Initiating openvpn file download
+2021-06-27 00:28:16,438  INFO     | [nirad.py:110] > Initiating sysctl.conf file download

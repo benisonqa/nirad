@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Expires" content="-1" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="Mon, 14 feb 1990 05:00:00 GMT"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+		<!-- <script type="text/javascript" src="{{ url_for('static', filename='code.js') }}" ></script> -->
+		<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="icon" type="image/png" href="frontend/images/pr.jpg" />
+		<title>Nirad Utility</title>
+	</head>
+
+	<body background="{{ url_for('static', filename= 'images/ps.jpg') }}">
+
+		<div id="wrapper">
+				<div id="header">
+					<h1><I><center>NIRAD SETUP UTILITY<sup> (Beta)</sup></center></I></h1>
+				</div>
+				<br>
+
+
+			<div id="body">
+				<div class="container-fluid">
+					<div class="sidenav">
+						<div class="navigator-menu">
+							<a href="#openvpn" data-toggle="collapse">OPENVPN</a>
+								<ul id="openvpn" class="collapse">
+									<li>config openvpn 'client'</li>
+								</ul>
+
+							<a href="#network" data-toggle="collapse">NETWORK</a>
+								<ul id="network" class="collapse">
+									<li>config interface 'loopback'</li>
+									<li>config globals 'globals'</li>
+									<li>config interface 'lan'</li>
+									<li>config device 'lan_dev'</li>
+									<li>config interface 'cl_wan1'</li>
+									<li>config interface 'cl_wan2'</li>
+									<li>config interface 'cl_wan3'</li>
+									<li>config interface 'cl_wan4'</li>
+									<li>config interface 'cl_wan5'</li>
+									<li>config interface 'cl_wan6'</li>
+									<li>config interface 'cl_wan7'</li>
+								</ul>
+						</div><!--.navigator-menu-->
+					</div><!--.sidenav-->
+
+					<div class="col-9 col-m-8">
+						<div class="form-section">
+							<form action="{{ url_for('process') }}" method="post">
+								<div class="parsed_files">
+									{% block content %}
+											{% for segment in combined_segment %}
+												{% for segment_name, dictfile in segment.items() %}
+													<div class="segmentName"><h1>{{segment_name.upper()}}</h1></div>
+													{% for elem in dictfile %}
+														{% set ns = namespace(x=0) %}
+														{% for header, list_of_dicts in elem.items() %}
+														<div class="border">
+														<div class="config-header"><h2>{{header}}</h2></div>
+															<div class="container">
+																{% for small_dicts in list_of_dicts %}
+																<div class="row">
+																	{% if ns.x<=(list_of_dicts|length)-1 %}
+																		<div class="column">
+																			{% for k,v in list_of_dicts[ns.x].items() %}
+																				<label for="{{k}}">{{k}}:</label>
+																				<input type="text" class="form-control" id ="{{k}}" value="{{v}}"/>
+																				{% set ns.x = ns.x+1  %}
+																			{% endfor %}
+																		</div><!--End of .column-->
+																	{% endif %}
+
+																	{% if ns.x<(list_of_dicts|length)-1 %}
+																		<div class="column">
+																			{% for k,v in list_of_dicts[ns.x].items() %}
+																				<label for="{{k}}">{{k}}:</label>
+																				<input type="text" class="form-control" id ="{{k}}" value="{{v}}"/>
+																				{% set ns.x= ns.x+1 %}
+																			{% endfor %}
+																		</div><!--column-->
+																	{% endif %}
+																</div><!-- .row-->
+																{% endfor %}<!-- small dicts -->
+															</div><br><!-- End of container -->
+														</div><br><!--border-->
+														{% endfor %} <!-- header, list for loop-->
+													{% endfor %} <!-- element in dictfile-->
+
+												{% endfor %}
+											{% endfor %}
+									{% endblock %}
+								</div><!-- End of .parsed Files-->
+								<br>
+								<div class="submit-button">
+									<button type="submit" class="btn btn-success">Update</button>
+									<button type="submit" class="btn btn-danger">Revert</button>
+								</div>
+							</form>
+						</div><!--.Form-section-->
+						<br><br><br>
+					</div> <!--col-8-->
+				</div> <!--End of Container- Fluid-->
+
+			</div><!-- End of body -->
+			<br>
+	
+			<div id="footer">
+				<p><I>A Benison Product</I></p>
+			</div>	
+
+        </div> <!---Ending Wrapper-->
+    </body>
+</html>

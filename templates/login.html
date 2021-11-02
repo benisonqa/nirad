@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Expires" content="-1" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="Mon, 14 feb 1990 05:00:00 GMT"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+	<!-- <script type="text/javascript" src="{{ url_for('static', filename='code.js') }}" ></script> -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="icon" type="image/png" href="frontend/images/pr.jpg" />
+	<title>Nirad Utility</title>
+	</head>
+
+	<body background="{{ url_for('static', filename= 'images/ps.jpg') }}">
+
+		<div id="wrapper">
+				<div id="header">
+					<h1><I><center>NIRAD SETUP UTILITY<sup> (Beta)</sup></center></I></h1>
+				</div>
+				<br>
+				
+				<div id="body">
+					<div class="container-fluid">
+						<div class="col-4 col-m-3 menu"></div> 
+
+							<div id="center">
+								<div class="col-4 col-m-9">
+									<!--div id="centershade"-->
+										<div class = "Form">
+											<div class="imgcontainer">
+												<img src="{{ url_for('static', filename='images/images.jpg') }}" alt="Avatar" class="avatar">
+											</div>
+											<div class="container-fluid"></div>
+												<form action="{{ url_for('login') }}" method="post">
+													<label for="ipaddr"><b>IP Address</b></label>
+													<input type="text" placeholder="Enter IP address of Nirad device*" name="ipaddr" required>
+													
+													<label for="uname"><b>Username</b></label>
+													<input type="text" placeholder="Default" name="uname">
+												
+													<label for="psw"><b>Password</b></label>
+													<input type="password" placeholder="Default" name="psw">
+	
+													<button type="submit" id="submit" class="btn btn-success">Submit</button>
+												</form>
+												<!-- Error Message -->																								
+												{% block content %}
+													<div class="container-fluid">
+														<div class="error_msg">
+															{% for message in get_flashed_messages() %}
+															<div class="alert alert-danger">
+																<button type="button" class="close" data-dismiss="alert">&times;</button>
+																<b>{{ message }}</b>
+															</div>
+															{% endfor %}
+															{% block page_content %}{% endblock %}
+														</div> <!--End of #div -->
+													</div>
+												{% endblock %}
+											</div> <!--End of .container-fluid -->
+										</div> <!-- End of Class Form-->
+	
+								</div>
+							</div> <!-- End of #center-->
+																					
+					</div> <!--End of container-fluid after body-->
+					<br>
+				</div> <!-- End of Div body-->
+				
+				<div id="footer">
+					<p><I>A Benison Product</I></p>
+				</div>		
+		
+			</div> <!---Ending Wrapper-->							
+	</body>
+</html>
+

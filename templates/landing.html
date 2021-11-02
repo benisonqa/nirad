@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Expires" content="-1" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="Mon, 14 feb 1990 05:00:00 GMT"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='code.js') }}" ></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css') }}">
+		<title>Nirad Utility</title>
+	</head>
+
+	<body background="{{ url_for('static', filename= 'images/ps.jpg') }}">
+
+		<div id="wrapper">
+				<div id="header">
+					<h1><I><center>NIRAD SETUP UTILITY<sup> (Beta)</sup></center></I></h1>
+				</div>
+				<br>
+
+			<div id="body">
+				<div class="container-fluid">
+					<div class="col-2 col-m-3 menu">
+						<div class="side_menu">
+							<br>
+							<div class="fupload">
+								<ul>
+									<li id="choose"><b> Upload Template </b></li>
+									<!-- Modal Script -->
+									<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal3" data-backdrop="false" style="display:none">File Upload</button>
+								</ul>
+								<br>
+							</div><!--.fupload-->
+						</div> <!--End of #side-menu-->
+					</div><!--col-2 -->
+				
+					<div id="center">
+						<div class="col-7 col-m-9">
+							<div class="device_details">
+								{% block content %}
+									{% for line in details_list %}
+										<div><pre>{{ line|safe }}</pre></div>
+									{% endfor %}
+								{% endblock %}
+							</div><!--.device_details-->
+							<br>
+						</div>
+					</div><!--center-->
+					
+				<br>
+				</div><!--.container-fluid-->
+			</div><!--body-->
+			
+			<br>
+			<div id="footer">
+				<p><I>A Benison Product</I></p>
+			</div>	
+
+		</div><!--wrapper-->
+
+		<!--Modal Call--->
+		
+		<div class="modal fade" id="myModal3" role="dialog">
+			<div class="modal-dialog">
+			
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+						<h4 class="modal-title">Upload Nirad Template</h4>
+					</div><!--.modal-header-->
+					<div class="modal-body" id="modal-body">
+						<div id="upload">
+							<form id="data" enctype="multipart/form-data" method="post"  target="hidden-form">
+								<div id="browse"><a>Browse</a>
+									<input type="file" name="files[]"/>
+								
+									<div class="fileupload-buttonbar">
+										<div id="uploading">
+											<b><div class="upload-files-list"></div></b>
+											<button type="submit" name="submit" value="Upload" class="btn btn-success start" style="display:none"> <span><b>Upload</b></span></button>
+											<iframe name="hidden-form" style="display:none"></iframe>
+											<div class ="file-progress" style="display:none">
+												<div class="progress-bar progress-bar-success progress-bar-striped myprogress" role="progressbar" style="width:0%">0%</div>
+												<br>
+											</div>
+										</div>
+										
+									</div> <!--End of class="fileupload-buttonbar"-->
+								</div>
+							</form>
+						</div> <!--End of id="upload"> -->
+					</div> <!--end of <div class="modal-body" id="modal-body"-->
+
+
+					<div class="modal-footer">
+							<div class="msg"></div>
+							<button type="button" id="proceed" class="btn btn-primary" data-dismiss="modal"><b>Proceed</b></button>
+					</div> <!-- end of class="modal-footer"-->
+				
+				</div> <!-- End of Modal Content-->
+			</div> <!--End og Modal Dialog-->
+		</div> <!--End of .Modal-fade-->
+	</body>
+</html>
